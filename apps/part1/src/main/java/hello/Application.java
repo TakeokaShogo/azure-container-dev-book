@@ -8,10 +8,16 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class Application {
-
+	
 	@RequestMapping("/")
 	public String home() {
 		return "Hello Docker World";
+	}
+
+	@RequestMapping("/hey")
+	public String hey() {
+		var msg = "Hey yo";
+		return msg;
 	}
 
 	public static void main(String[] args) {

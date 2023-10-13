@@ -4,12 +4,12 @@
 #     url: https://schedule.xxx.japaneast.azurecontainerapps.io/schedule
 
 # # Resilience4j の設定
-# resilience4j:
-#   retry: #リトライの設定
-#     instances:
-#       scheduleRetry:
-#         max-attempts: 10
-#         waitDuration: 1s
+resilience4j:
+  retry: #リトライの設定
+    instances:
+      scheduleRetry:
+        max-attempts: 10
+        waitDuration: 1s
 
 #   ratelimiter:  #レート制限の設定
 #     limiters:
@@ -35,7 +35,7 @@ spring:
   main:
     cloud-platform: kubernetes
 
-  # #  Azure Database for MySQL-flexible で動かすときは以下を有効にしてください(ローカル環境動作確認用)
+  # #  Azure Database for MySQL-flexible で動かすときは以下を有効にしてください(ローカル環境テスト用)
   # datasource:
   #   username: azureadmin
   #   url: jdbc:mysql://xxxx.mysql.database.azure.com:3306/backenddb?serverTimezone=UTC
